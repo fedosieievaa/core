@@ -5,6 +5,5 @@
         background: linear-gradient(to top left, $background);
     }
     color: $text;
-    border: 10px solid $border;
     @extend %color-scheme-extend;
 }
