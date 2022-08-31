@@ -6,20 +6,21 @@ import { Input } from '../../components/Input/';
 import { Button } from '../../components/Button/';
 import { Modal } from '../../components/Modal/';
 import { Loader } from '../../components/Loader/';
+import { Dropdown } from '../../components/Dropdown/';
 import { Main } from '../../layouts';
 
 enum InputTypes {
-  primary = 'primary',
-  success = 'success',
-  error = 'error',
-  disabled = 'disabled',
+    primary = 'primary',
+    success = 'success',
+    error = 'error',
+    disabled = 'disabled',
 }
 enum ButtonTypes {
-  primary = 'primary',
-  success = 'success',
-  error = 'error',
-  disabled = 'disabled',
-  loading = 'loading',
+    primary = 'primary',
+    success = 'success',
+    error = 'error',
+    disabled = 'disabled',
+    loading = 'loading',
 }
 
 export default function Example() {
@@ -30,18 +31,16 @@ export default function Example() {
 
     return (
         <Main>
-            <div className={`${styles.app} ${isLight
-                ? styles.light
-                : ''}`}>
+            <div className={`${styles.app} ${isLight ? styles.light : ''}`}>
                 <ol>
-                    <li>
+                    <li className={styles.listItem}>
                         <span className={styles.list}>
                             <Typography text="example-first-li" />
                         </span>
                         <Languages />
                         <Typography text="example-text" />
                     </li>
-                    <li>
+                    <li className={styles.listItem}>
                         <span className={styles.list}>
                             <Typography text="example-second-li" />
                         </span>
@@ -50,141 +49,127 @@ export default function Example() {
                             onClick={() => {
                                 setIsLight(!isLight);
                             }}
-                            text={
-                                <Typography
-                                    text={isLight
-                                        ? 'dark-mode'
-                                        : 'light-mode'}
-                                    isLight={isLight}
-                                />
-                            }
+                            text={<Typography text={isLight ? 'dark-mode' : 'light-mode'} isLight={isLight} />}
                             isLight={isLight}
                         />
                     </li>
-                    <li>
+                    <li className={styles.listItem}>
                         <span className={styles.list}>
                             <Typography text="example-third-li" />
                         </span>
-                        <ol>
-                            <li>
-                                <Typography text="example-third-li-1" />
-                                <div className={styles.form}>
-                                    <Input
-                                        status={InputTypes.primary}
-                                        placeholder="Type..."
-                                        onChange={(e: any) => {
-                                            setInputValue(e.target.value);
-                                        }}
-                                        value={inputValue}
-                                        isLight={isLight}
-                                    />
-                                    <Button
-                                        status={buttonStatus}
-                                        onClick={() => {
-                                            console.log('clicked');
-                                        }}
-                                        text={<Typography text="submit" isLight={isLight} />}
-                                        isLight={isLight}
-                                    />
-                                </div>
-                            </li>
-                            <li>
-                                <Typography text="example-third-li-2" />
-                                <div className={styles.form}>
-                                    <Input
-                                        status={InputTypes.success}
-                                        placeholder="Type..."
-                                        onChange={(e: any) => {
-                                            setInputValue(e.target.value);
-                                        }}
-                                        value={inputValue}
-                                        isLight={isLight}
-                                    />
-                                    <Button
-                                        status={ButtonTypes.success}
-                                        onClick={() => {
-                                            console.log('clicked');
-                                        }}
-                                        text={<Typography text="submit" isLight={isLight} />}
-                                        isLight={isLight}
-                                    />
-                                </div>
-                            </li>
-                            <li>
-                                <Typography text="example-third-li-3" />
-                                <div className={styles.form}>
-                                    <Input
-                                        status={InputTypes.error}
-                                        placeholder="Type..."
-                                        onChange={(e: any) => {
-                                            setInputValue(e.target.value);
-                                        }}
-                                        value={inputValue}
-                                        isLight={isLight}
-                                    />
-                                    <Button
-                                        status={ButtonTypes.error}
-                                        onClick={() => {
-                                            console.log('clicked');
-                                        }}
-                                        text={<Typography text="submit" isLight={isLight} />}
-                                        isLight={isLight}
-                                    />
-                                </div>
-                            </li>
-                            <li>
-                                <Typography text="example-third-li-4" />
-                                <div className={styles.form}>
-                                    <Input
-                                        status={InputTypes.disabled}
-                                        placeholder="Type..."
-                                        onChange={(e: any) => {
-                                            setInputValue(e.target.value);
-                                        }}
-                                        value={inputValue}
-                                        isLight={isLight}
-                                    />
-                                    <Button
-                                        status={ButtonTypes.disabled}
-                                        onClick={() => {
-                                            console.log('clicked');
-                                        }}
-                                        text={<Typography text="submit" isLight={isLight} />}
-                                        isLight={isLight}
-                                    />
-                                </div>
-                            </li>
-                            <li>
-                                <Typography text="example-third-li-5" />
-                                <div className={styles.form}>
-                                    <Input
-                                        status={InputTypes.primary}
-                                        placeholder="Type..."
-                                        onChange={(e: any) => {
-                                            setInputValue(e.target.value);
-                                        }}
-                                        value={inputValue}
-                                        isLight={isLight}
-                                    />
-                                    <Button
-                                        status={ButtonTypes.loading}
-                                        onClick={() => {
-                                            console.log('clicked');
-                                        }}
-                                        text={<Typography text="submit" isLight={isLight} />}
-                                        isLight={isLight}
-                                    />
-                                </div>
-                            </li>
-                        </ol>
+
+                        <Typography text="example-third-li-1" />
+                        <div className={styles.form}>
+                            <Input
+                                status={InputTypes.primary}
+                                placeholder="Type..."
+                                onChange={(e: any) => {
+                                    setInputValue(e.target.value);
+                                }}
+                                value={inputValue}
+                                isLight={isLight}
+                            />
+                            <Button
+                                status={buttonStatus}
+                                onClick={() => {
+                                    console.log('clicked');
+                                }}
+                                text={<Typography text="submit" isLight={isLight} />}
+                                isLight={isLight}
+                            />
+                        </div>
+
+                        <Typography text="example-third-li-2" />
+                        <div className={styles.form}>
+                            <Input
+                                status={InputTypes.success}
+                                placeholder="Type..."
+                                onChange={(e: any) => {
+                                    setInputValue(e.target.value);
+                                }}
+                                value={inputValue}
+                                isLight={isLight}
+                            />
+                            <Button
+                                status={ButtonTypes.success}
+                                onClick={() => {
+                                    console.log('clicked');
+                                }}
+                                text={<Typography text="submit" isLight={isLight} />}
+                                isLight={isLight}
+                            />
+                        </div>
+
+                        <Typography text="example-third-li-3" />
+                        <div className={styles.form}>
+                            <Input
+                                status={InputTypes.error}
+                                placeholder="Type..."
+                                onChange={(e: any) => {
+                                    setInputValue(e.target.value);
+                                }}
+                                value={inputValue}
+                                isLight={isLight}
+                            />
+                            <Button
+                                status={ButtonTypes.error}
+                                onClick={() => {
+                                    console.log('clicked');
+                                }}
+                                text={<Typography text="submit" isLight={isLight} />}
+                                isLight={isLight}
+                            />
+                        </div>
+
+                        <Typography text="example-third-li-4" />
+                        <div className={styles.form}>
+                            <Input
+                                status={InputTypes.disabled}
+                                placeholder="Type..."
+                                onChange={(e: any) => {
+                                    setInputValue(e.target.value);
+                                }}
+                                value={inputValue}
+                                isLight={isLight}
+                            />
+                            <Button
+                                status={ButtonTypes.disabled}
+                                onClick={() => {
+                                    console.log('clicked');
+                                }}
+                                text={<Typography text="submit" isLight={isLight} />}
+                                isLight={isLight}
+                            />
+                        </div>
+
+                        <Typography text="example-third-li-5" />
+                        <div className={styles.form}>
+                            <Input
+                                status={InputTypes.primary}
+                                placeholder="Type..."
+                                onChange={(e: any) => {
+                                    setInputValue(e.target.value);
+                                }}
+                                value={inputValue}
+                                isLight={isLight}
+                            />
+                            <Button
+                                status={ButtonTypes.loading}
+                                onClick={() => {
+                                    console.log('clicked');
+                                }}
+                                text={<Typography text="submit" isLight={isLight} />}
+                                isLight={isLight}
+                            />
+                        </div>
                     </li>
-                    <li>
+                    <li className={styles.listItem}>
                         <Typography text="example-fourth-li" />
                         <div className={styles.loaderWrapper}>
                             <Loader isLight={isLight} isBig />
                         </div>
                     </li>
-                    <li>
+                    <li className={styles.listItem}>
                         <span className={styles.list}>
                             <Typography text="example-fifth-li" />
                         </span>
@@ -214,8 +199,16 @@ export default function Example() {
                             </Modal>
                         )}
                     </li>
-                    <li>
+                    <li className={styles.listItem}>
                         <Typography text="example-sixth-li" />
+                        <Dropdown
+                            items={[
+                                { name: 'first', id: 8382 },
+                                { name: 'second', id: 1282 },
+                                { name: 'third', id: 4534 },
+                            ]}
+                            isLight={isLight}
+                        />
                     </li>
                 </ol>
             </div>

@@ -15,6 +15,6 @@ export default {
     "example-third-li-5": "Loading (button only):",
     "example-fourth-li": "Loader example.",
     "example-fifth-li": "Press the button to open modal window.",
-    "example-sixth-li": "See how does MOBx store work.",
+    "example-sixth-li": "Dropdown example:",
     "open": "Open"
 }

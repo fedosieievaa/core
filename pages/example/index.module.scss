@@ -7,11 +7,14 @@
     position: relative;
     padding: 30px 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     ol {
         text-align: left;
         margin: 0;
-
-        & li {
+        & .listItem {
             & .list {
                 display: block;
                 margin: 0 0 20px 0;
@@ -22,11 +25,6 @@
             width: 700px;
             border-radius: 10px;
             margin: 0 0 10px 0;
-            & li {
-                border: 1px solid rgb(147, 121, 121);
-                padding: 10px;
-                width: 620px;
-            }
         }
     }
     & .paragraph {

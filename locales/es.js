@@ -15,6 +15,6 @@ export default {
     "example-third-li-5": "Cargando (solo botón):",
     "example-fourth-li": "Ejemplo de cargador.",
     "example-fifth-li": "Pulse el botón para abrir la ventana modal.",
-    "example-sixth-li": "Ver cómo funciona la tienda MOBx.",
+    "example-sixth-li": "El ejemplo de desplegable",
     "open": "Abrir"
 }

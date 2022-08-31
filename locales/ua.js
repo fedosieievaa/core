@@ -15,6 +15,6 @@ export default {
     "example-third-li-5": "Завантаження (тільки кнопка):",
     "example-fourth-li": "Приклад лоадерa.",
     "example-fifth-li": "Натисніть кнопку, щоб відкрити модальне вікно.",
-    "example-sixth-li": "Ось як працює сховище MOBx.",
+    "example-sixth-li": "Приклад випадаючого меню",
     "open": "Відкрити"
 }
