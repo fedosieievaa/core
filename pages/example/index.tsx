@@ -31,7 +31,9 @@ export default function Example() {
 
     return (
         <Main>
-            <div className={`${styles.app} ${isLight ? styles.light : ''}`}>
+            <div className={`${styles.app} ${isLight
+                ? styles.light
+                : ''}`}>
                 <ol>
                     <li className={styles.listItem}>
                         <span className={styles.list}>
@@ -49,7 +51,9 @@ export default function Example() {
                             onClick={() => {
                                 setIsLight(!isLight);
                             }}
-                            text={<Typography text={isLight ? 'dark-mode' : 'light-mode'} isLight={isLight} />}
+                            text={<Typography text={isLight
+                                ? 'dark-mode'
+                                : 'light-mode'} isLight={isLight} />}
                             isLight={isLight}
                         />
                     </li>
@@ -203,9 +207,12 @@ export default function Example() {
                         <Typography text="example-sixth-li" />
                         <Dropdown
                             items={[
-                                { name: 'first', id: 8382 },
-                                { name: 'second', id: 1282 },
-                                { name: 'third', id: 4534 },
+                                { name: 'first',
+                                    id: 8382 },
+                                { name: 'second',
+                                    id: 1282 },
+                                { name: 'third',
+                                    id: 4534 },
                             ]}
                             isLight={isLight}
                         />

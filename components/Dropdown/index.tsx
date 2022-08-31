@@ -12,7 +12,9 @@ export const Dropdown = ({ name = 'Dropdown', items, isLight }: Props) => {
     const [activeButton, setActiveButton] = useState(items[0].name);
 
     return (
-        <div className={`${styles.dropdown} ${isLight ? styles.light : ''}`}>
+        <div className={`${styles.dropdown} ${isLight
+            ? styles.light
+            : ''}`}>
             <button
                 className={styles.dropdownButton}
                 onClick={() => {
@@ -27,7 +29,9 @@ export const Dropdown = ({ name = 'Dropdown', items, isLight }: Props) => {
                         return (
                             <li
                                 className={`${styles.dropdownListItem} ${
-                                    item.name === activeButton ? styles.active : ''
+                                    item.name === activeButton
+                                        ? styles.active
+                                        : ''
                                 }`}
                                 key={item.id}
                                 onClick={() => {
