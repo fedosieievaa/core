@@ -5,12 +5,17 @@
     @include color-scheme($dark-theme...);
     height: 100%;
     position: relative;
-    padding: 30px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    &.light {
+        @include color-scheme($light-theme...);
+        & .paragraph {
+            color: rgb(51, 47, 47);
+        }
+    }
     ol {
         text-align: left;
         margin: 0;
@@ -60,12 +65,5 @@
     }
     & .modal {
         width: 500px;
-    }
-}
-
-.app.light {
-    @include color-scheme($light-theme...);
-    & .paragraph {
-        color: rgb(51, 47, 47);
     }
 }
